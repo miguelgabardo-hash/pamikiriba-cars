@@ -1,1 +1,129 @@
+:root {
+  --primary-blue: #00f0ff;
+  --primary-red: #ff0055;
+  --bg-dark: #0a0b10;
+  --card-bg: #121520;
+  --text-light: #e0e6ed;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(10, 11, 16, 0.9);
+  border-bottom: 2px solid var(--primary-blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  text-shadow: 0 0 10px var(--primary-blue);
+}
+
+.logo span {
+  color: var(--primary-red);
+  text-shadow: 0 0 10px var(--primary-red);
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  background: var(--primary-blue);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px var(--primary-blue);
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, rgba(255,0,85,0.1) 0%, rgba(0,240,255,0.1) 100%);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.catalog-section {
+  padding: 40px 50px;
+}
+
+.catalog-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--primary-red);
+  padding-left: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-red);
+  box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+}
+
+.card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.card li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-red);
+  text-shadow: 0 0 8px rgba(255, 0, 85, 0.6);
+}
+
+.hidden {
+  display: none;
+}
