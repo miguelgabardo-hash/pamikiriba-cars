@@ -1,1 +1,39 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltTech - Veículos Elétricos do Futuro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">VOLT<span>TECH</span></div>
+    <nav>
+      <button class="nav-btn active" onclick="showCategory('cars')">Carros</button>
+      <button class="nav-btn" onclick="showCategory('bikes')">Motos</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>O Futuro da Mobilidade Elétrica</h1>
+    <p>Performance, alta tecnologia e design futurista.</p>
+  </section>
+
+  <main>
+    <section id="cars" class="catalog-section">
+      <h2>Carros Elétricos</h2>
+      <div class="grid" id="cars-grid"></div>
+    </section>
+
+    <section id="bikes" class="catalog-section hidden">
+      <h2>Motos Futuristas</h2>
+      <div class="grid" id="bikes-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
